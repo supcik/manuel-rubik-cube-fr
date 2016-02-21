@@ -7,6 +7,7 @@
 \usepackage{rubikcube,rubikrotation}
 \usepackage{parskip}
 \usepackage{enumitem}
+\usepackage{url}
 
 \usetikzlibrary{arrows}
 \setlist[itemize,1]{label={\fontfamily{cmr}\fontencoding{T1}\selectfont\textbullet}}
@@ -15,26 +16,59 @@
 \setkomafont{disposition}{\normalfont}
 
 \author{Jacques Supcik}
-\title{Le Rubik's Cube}
+\title{Apprenez à résoudre le Rubik's Cube}
+\subtitle{La méthode \og couche par couche\fg}
 \begin{document}
 
 \maketitle
+\thispagestyle{empty}
+\par\vspace*{\fill}
+\includegraphics[width=30mm]{by.pdf}
+
+Copyright \textcopyright{} 2016 Jacques Supcik
+
+Cette œuvre est mise à disposition selon les termes de la Licence Creative Commons Attribution 4.0 International.
+\medskip\\
+Pour obtenir une copie de la licence, visitez:\\
+\url{http://creativecommons.org/licenses/by/4.0/deed.fr}.
+\newpage
+
 \tableofcontents
 
 \chapter{Introduction}
 
-Le Rubik's cube est un jeu qui était très populaire dans les années 80.
-Aujourd'hui encore, ce cube est un jouet très apprécié par les enfants
-qui s'intéresse aux sciences, aux mathématiques, ou à la technologie.
+Le Rubik's cube à été inventé en 1974 par le sculpteur et professeur d'architecture hongrois \emph{Ernő Rubik}. Ce cube était très populaire
+dans les années 80, mais aujourd'hui encore, il reste un objet très apprécié
+par tout ceux qui s'intéressent aux sciences, aux mathématiques, ou à la technologie.
 
-Ce manuel décrit de manière simple comment résoudre le Rubik's cube. Le but n'est pas de vous
-apprendre à battre des records de vitesse, mais plutôt de trouver la manière la plus simple possible.
+Les règles du jeu sont extrèmement syimple: il suffit de faire pivoter les faces du cube de manière à rassembles toutes les pastilles de couleur sur la même face:
 
-Ce livre explique la méthode \emph{par couche}.
+\begin{center}
+	\RubikCubeSolved
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	}
+\end{center}
+
+
+Mais a simplicité s'arrête là. Il existe plus de 43 trillions\footnote{pour être précis, il y a exactement 43\,252\,003\,274\,489\,856\,000 combinaisons} de configuration du cube et il est très difficile de prévoir quels mouvements seront nécessaire pour résoudre le cube.
+
+Des chercheurs on démontrés\cite{god20} qu'on pouvait résoudre n'importe quel cube avec un maximum de 20 mouvements. La méthode \emph{couche par couche} présentée dans ce livre vous prendra certainement beaucoup plus que 20 mouvements, mais elle a l'avantage d'être très simple à apprendre. Si plus
+tard vous souhaitez battre des records de vitesse, vous devrez apprendre
+d'autres méthodes; plus rapide, mais aussi plus difficile à mémoriser.
+ 
+Nous commencerons par positionner les pièces de la couche du haut, ensuite nous positionnerons les pièces de la couche du milieu et nous terminerons par les pièces de la dernière
+couche. Prenez le temps de bien exercez chaque couche avant de passer
+à la suivante. Vous n'apprendrez pas plus vite en brûlant les étapes. Si vous utilisez ce livre dans le cadre d'une série d'ateliers, vous pouvez très bien faire trois
+séances de une heure chacune. Vous étudierez alors une couche par séance et vous aurez le temps entre les séances pour vous exercer. 
+
+\chapter{Les différentes parties du cube}
+
+Commençons par étudier les différentes parties du cube
 
 \section{Les centres}
 
-Le cube a 6 \textbf{centres} qui sont toujours placé de la même manière
+Le cube se compose de 6 \textbf{centres} qui sont toujours placés de la même manière:
 
 \begin{center}
 	\RubikFaceUp%
@@ -54,11 +88,17 @@ Le cube a 6 \textbf{centres} qui sont toujours placé de la même manière
 	}
 \end{center}
 
+Les centres sont identifiés par une \textbf{pastille}\footnote{La plupart des cubes du commerce ont des auto-collants pour identifier les couleurs.} de couleur. Les
+couleurs du cube original sont blanc, rouge, bleu, orange, vert et jaune.
+
+Si votre cube à d'autres couleurs ce n'est pas grave, la méthode teste la
+même.
+
 Vous pouvez faire tous les mouvements que vous voulez, vous ne changerez jamais la position des centres.
 
 \section{Les arrêtes}
 
-Le cube a ensuite 12 \textbf{arrêtes}:
+Le cube se compose également de 12 \textbf{arrêtes}:
 
 \begin{center}
 	\RubikFaceUp%
@@ -78,7 +118,7 @@ Le cube a ensuite 12 \textbf{arrêtes}:
 	}
 \end{center}
 
-Les arrêtes ont toutes 2 couleurs.
+Les arrêtes sont les pièces entre les centres et ont toutes 2 pastilles de couleur.
 
 \section{Les coins}
 
@@ -102,9 +142,10 @@ Pour terminer le cube à 8 \textbf{coins}:
 	}
 \end{center}
 
-Chaque coin à 3 couleurs.
+Chaque coin à 3 pastilles de couleur.
 
-Il reste encore une pièce que nous ne voyons pas et qui est au milieu du cube. Si on additionne tous les types de pièces, on a $6 + 12 + 8 + 1 = 27$, ce qui correspond bien à ce que nous attendions ($ 3 * 3 * 3 = 3^3 = 27$)
+Il reste encore une pièce que nous ne voyons pas et qui est au milieu du cube. Si on additionne tous les types de pièces, on a $6 + 12 + 8 + 1 = 27$, ce qui correspond bien à ce que nous attendions avec un cube de $3 \times 3 \times 3$\footnote{$3 \cdot 3 \cdot 3 = 3^3 = 27$}.
+
 
 \chapter{La première couche}
 
@@ -615,15 +656,20 @@ couche du cube. Entraînez-vous plusieurs fois à faire cette couche.
 	\par
 }
 
-Il se trompe de sens et part à gauche: \rrh{Dp}
+L'histoire qui nous permet de mémoriser les mouvements est connue sous \og l'histoire du Belge\fg{}. Mais comme nous aimons bien les Belges et que nous ne voulons pas de problème avec eux, nous appellerons plutôt cette histoire \og l'histoire du distrait\fg{}.
 
-\Rubik{Rp}%
-\Rubik{D}%
-\Rubik{R}%
-\Rubik{D}%
-\Rubik{F}%
-\Rubik{Dp}%
-\Rubik{Fp}%
+\begin{itemize}
+	\item Il se trompe de sens et part à gauche: \rrh{Dp}.
+	\item Ses amis viennent le chercher: \rrh{Rp}.
+	\item Il se dirige alors dans le bon sens: \rrh{D}.
+	\item Ses amis rentrent chez eux: \rrh{R}.
+	\item Emporté par son élan, il continue trop loin: \rrh{D}.
+	\item Il va tellement vite qu'il emporte la face avant: \rrh{F}.
+	\item Il remarque enfin son erreur et retourne sur ses pas: \rrh{Dp}.
+	\item La face avant peut se remettre en place: \rrh{Fp}.
+	
+\end{itemize}
+
 
 \chapter{La dernière couche}
 
@@ -644,6 +690,22 @@ Il se trompe de sens et part à gauche: \rrh{Dp}
 	\par
 }
 
+\begin{thebibliography}{9}
+	
+	\bibitem{god20}
+	 Tomas Rokicki, Herbert Kociemba, Morley Davidson, and John Dethridge
+	\emph{God's Number is 20},
+	\url{http://www.cube20.org/}
 
+	\bibitem{noobs}
+	\emph{Le Rubik's cube pour les noobs},
+	\url{http://www.rubiks-cube.fr/}
+
+	\bibitem{francocube}
+	Cyril, Deadalnix, Ofapel,
+	\emph{Rubik's Cube, méthodes pour tous},
+	\url{http://www.francocube.com/}
+	
+\end{thebibliography}
 
 \end{document}
