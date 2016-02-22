@@ -627,7 +627,6 @@ Le résultat sera:
 	
 	\ShowCube{2cm}{0.5}{%
 		\DrawRubikCubeRD
-		\tikzset{>=latex}
 	}
 \end{center} 
 
@@ -690,6 +689,131 @@ L'histoire qui nous permet de mémoriser les mouvements est connue sous \og l'hi
 	\par
 }
 
+\chapter{Notation}
+La littérature sur le Rubik's cube utilise souvent une notation spécifique pour décrire les mouvements. La table de la page suivante décrit la notation la plus souvent utilisée.
+
+Les lettres correspondent à la description de la face (en anglais): \textbf{R}ight (droit), \textbf{L}eft (gauche), \textbf{U}p (dessus), \textbf{D}own (dessous), \textbf{F}ront (avant), \textbf{B}ack (arrière).
+Si la lettre est seule, il faut tourner dans le sens des aiguilles d'une montre.
+Si la lettre est suivie d'un prime (') alors il faut tourner dans le sens \textbf{contraire} des aiguilles d'une montre. Si la lettre est suivie du chiffre 2, il faut répéter deux fois le mouvement (ce qui revient à lui faire faire un demi-tour).
+
+Cette notation est également utilisée dans les concours pour indiquer comment \emph{mélanger} un cube. En partant du cube terminé, faites la séquence suivante:
+
+\textbf{L2 U' B2 U2 B' -- U B U' L' F' -- L2 B D R D2 -- B2 F2 R' U L2 -- F2 D2 R B F}
+
+Le résultat sera:
+
+\begin{center}
+	\RubikFaceRight%
+	{R}{R}{W}%
+	{G}{G}{R}%
+	{O}{R}{O}
+	\RubikFaceFront%
+	{O}{O}{G}%
+	{O}{O}{O}%
+	{B}{Y}{W}
+	\RubikFaceUp%
+	{G}{B}{B}%
+	{G}{W}{W}%
+	{B}{Y}{W}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	}
+\end{center} 
+
+\setlength{\tabcolsep}{8pt}
+\begin{center}
+\begin{tabular}{ccccc}
+{\Huge\textbf{R}} &
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,->] (2.5,0.5) -- (2.5,3) -- (2.5+5/6,3+5/6);
+}
+& \hspace*{5mm} &
+{\Huge\textbf{R'}} &
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,<-] (2.5,0.5) -- (2.5,3) -- (2.5+5/6,3+5/6);
+}
+\\
+\noalign{\medskip}
+{\Huge\textbf{L}} &
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,<-] (0.5,0.5) -- (0.5,3) -- (0.5+5/6,3+5/6);
+}
+& \hspace*{5mm} &
+{\Huge\textbf{L'}} &
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,->] (0.5,0.5) -- (0.5,3) -- (0.5+5/6,3+5/6);
+}
+\\
+\noalign{\medskip}
+{\Huge\textbf{U}} &
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,<-] (0.5,2.5) -- (3,2.5) -- (3+5/6,2.5+5/6);
+}
+& \hspace*{5mm} &
+{\Huge\textbf{U'}} &
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,->] (0.5,2.5) -- (3,2.5) -- (3+5/6,2.5+5/6);
+}
+\\
+\noalign{\medskip}
+{\Huge\textbf{D}} &
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,->] (0.5,0.5) -- (3,0.5) -- (3+5/6,0.5+5/6);
+}
+& \hspace*{5mm} &
+{\Huge\textbf{D'}} &
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,<-] (0.5,0.5) -- (3,0.5) -- (3+5/6,0.5+5/6);
+}
+\\
+\noalign{\medskip}
+{\Huge\textbf{F}} &
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,->] (0.5+1/6,3+1/6) -- (3+1/6,3+1/6) -- (3+1/6,0.5+1/6);
+}
+& \hspace*{5mm} &
+{\Huge\textbf{F'}} &
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,<-] (0.5+1/6,3+1/6) -- (3+1/6,3+1/6) -- (3+1/6,0.5+1/6);
+}
+\\
+\noalign{\medskip}
+{\Huge\textbf{B}} &
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,<-] (0.5+5/6,3+5/6) -- (3.5+2/6,3+5/6) -- (3.5+2/6,1+1/6);
+}
+& \hspace*{5mm} &
+{\Huge\textbf{B'}} &
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,->] (0.5+5/6,3+5/6) -- (3.5+2/6,3+5/6) -- (3.5+2/6,1+1/6);
+}
+\end{tabular}
+\end{center}
+
 \begin{thebibliography}{9}
 	
 	\bibitem{god20}
@@ -705,6 +829,11 @@ L'histoire qui nous permet de mémoriser les mouvements est connue sous \og l'hi
 	Cyril, Deadalnix, Ofapel,
 	\emph{Rubik's Cube, méthodes pour tous},
 	\url{http://www.francocube.com/}
+	
+	\bibitem{scramble}
+	\emph{Rubik’s Cube Scramble Generator},
+	\url{http://ruwix.com/puzzle-scramble-generators/rubiks-cube-scrambler/}
+	
 	
 \end{thebibliography}
 
