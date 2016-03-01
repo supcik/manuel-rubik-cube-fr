@@ -9,18 +9,43 @@
 \usepackage{enumitem}
 \usepackage{url}
 
+
 \usetikzlibrary{arrows}
 \setlist[itemize,1]{label={\fontfamily{cmr}\fontencoding{T1}\selectfont\textbullet}}
 
 \setmainfont{Alegreya Sans}
 \setkomafont{disposition}{\normalfont}
 
-\author{Jacques Supcik}
-\title{Apprenez à résoudre le Rubik's Cube}
-\subtitle{La méthode \og couche par couche\fg}
 \begin{document}
+\frontmatter
+\thispagestyle{empty}
+\begin{titlepage}
+\begin{center}
+\includegraphics[width=8cm]{bluemagic_logo.pdf}
+\vspace*{8mm}
 
-\maketitle
+\rule{\textwidth}{1pt}
+{\fontspec{Roboto}\Huge\textbf{Apprenez à résoudre\\
+\smallskip
+le Rubik's Cube}}
+\medskip
+
+{\LARGE\textit{La méthode \og couche par couche\fg}}
+\rule{\textwidth}{1pt}
+\vspace*{10mm}
+
+{\Large Jacques Supcik}
+\vspace*{10mm}
+
+\enlargethispage{1cm}
+{\Large Mars 2016}
+\vfill
+
+{\Huge\textit{\textcolor{red}{Provisoire}}}
+
+\end{center}
+\end{titlepage}
+
 \thispagestyle{empty}
 \par\vspace*{\fill}
 \includegraphics[width=30mm]{by.pdf}
@@ -34,7 +59,7 @@ Pour obtenir une copie de la licence, visitez:\\
 \newpage
 
 \tableofcontents
-
+\mainmatter
 \input{intro}
 \input{parts}
 \input{layer1}
@@ -42,7 +67,7 @@ Pour obtenir une copie de la licence, visitez:\\
 % \input{layer3}
 \input{notation}
 
-
+\backmatter
 \begin{thebibliography}{9}
 	
 	\bibitem{god20}
