@@ -1,0 +1,512 @@
+\chapter{La première couche}
+
+{
+\centering
+\RubikFaceUpAll{W}
+\RubikFaceRight%
+{G}{G}{G}%
+{X}{G}{X}%
+{X}{X}{X}
+\RubikFaceFront%
+{O}{O}{O}%
+{X}{O}{X}%
+{X}{X}{X}
+\ShowCube{4cm}{1}{%
+	\DrawRubikCubeRU
+}
+\par
+}
+\medskip
+
+Pour commencer, nous allons résoudre la couche du haut du cube. Nous choisissons de positionner
+le cube avec le centre blanc vers le haut, mais vous pouvez choisir une autre couleur si vous préférez.
+
+
+\section{La croix}
+
+Pour résoudre la première couche du cube, nous commençons
+par faire une «croix» sur la face du haut.
+
+\begin{center}
+\RubikFaceUp%
+{X}{W}{X}%
+{W}{W}{W}%
+{X}{W}{X}
+\RubikFaceRight%
+{X}{G}{X}%
+{X}{G}{X}%
+{X}{X}{X}
+\RubikFaceFront%
+{X}{O}{X}%
+{X}{O}{X}%
+{X}{X}{X}
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+}
+\end{center}
+
+Notez qu'il ne suffit pas de mettre les 4 arrêtes blanches sur la face du haut, il faut aussi
+que l'autre côté des arrêtes corresponde avec la couleur des autres centres (orange et vert dans l'exemple ci-dessus).
+
+Cette première couche peut se résoudre de manière assez intuitive et certains n'auront pas besoin
+d'aide. Voici cependant des indications pour ceux qui auraient plus de peine.
+
+Notez que vous pouvez faire pivoter la couche du bas de votre cube tant que vous voulez sans «casser» ce que vous avez déjà fait sur les couches du haut. \rrh{D} ou \rrh{Dp}. Ca nous sera bien utile pour la suite.
+
+\subsection{L'arrête à déplacer se trouve sur la dernière couche}
+\label{subsec:c1d}
+
+Si l'arrête que vous souhaitez déplacer pour faire la croix se trouve sur la couche du bas, vous pouvez tourner cette couche du bas pour l'amener sur la bonne face. Nous aurons alors deux cas possible:
+
+Soit l'arrête a la face blanche vers le bas:
+
+\begin{center}
+	\RubikFaceDown%
+	{X}{W}{X}%
+	{X}{Y}{X}%
+	{X}{X}{X}
+	\RubikFaceRight%
+	{X}{X}{X}%
+	{X}{G}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{X}{X}{X}%
+	{X}{O}{X}%
+	{X}{O}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRD
+	}
+\end{center}
+
+et dans ce cas il suffit de faire tourner la face avant deux fois: \rrh{F}\rrh{F} (ou \rrh{Fp}\rrh{Fp}).
+
+Ou alors l'arrête blanche est sur la face avant:
+
+\begin{center}
+	\RubikFaceDown%
+	{X}{O}{X}%
+	{X}{Y}{X}%
+	{X}{X}{X}
+	\RubikFaceRight%
+	{X}{X}{X}%
+	{X}{G}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{X}{X}{X}%
+	{X}{O}{X}%
+	{X}{W}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRD
+	}
+\end{center}
+
+Dans ce cas, nous faisons remonter l'arrête avec les mouvements suivants: \rrh{D}\rrh{Sl}\rrh{Dp}\rrh{Slp}
+
+
+\subsection{L'arrête se trouve sur la couche du milieu}
+
+Si l'arrête se trouve sur la couche du milieu, comme ceci:
+
+\begin{center}
+	\RubikFaceUp%
+	{X}{X}{X}%
+	{X}{W}{X}%
+	{X}{X}{X}
+	\RubikFaceRight%
+	{X}{X}{X}%
+	{W}{G}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{X}{X}{X}%
+	{X}{O}{O}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	}
+\end{center}
+
+On peut amener cette arrête en place tout simplement en tournant la face avant dans le sens anti-horaire\footnote{Dans le sens contraire des aiguilles d'une montre}: \rrh{Fp}.
+
+Si l'arrête se trouve sur la face du milieu, mais qu'elle est mal positionnée
+
+\begin{center}
+	\RubikFaceUp%
+	{X}{X}{X}%
+	{X}{W}{X}%
+	{X}{X}{X}
+	\RubikFaceRight%
+	{X}{X}{X}%
+	{O}{G}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{X}{X}{X}%
+	{X}{O}{W}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	}
+\end{center}
+
+alors on peut déplace cette arrête sur la couche du bas: \rrh{Rp}\rrh{Dp}\rrh{R} et on ramène l'arrête correctement positionnée sur la couche du haut: \rrh{F}\rrh{F}
+
+
+Si l'arrête se trouve sur la couche du milieu, mais nêst pas sur la bonne face:
+
+\begin{center}
+	\RubikFaceUp%
+	{X}{X}{X}%
+	{X}{W}{X}%
+	{X}{X}{X}
+	\RubikFaceRight%
+	{X}{X}{X}%
+	{W}{R}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{X}{X}{X}%
+	{X}{G}{O}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	}
+\end{center}
+
+alors on déplace cette arrête sur la couche du bas: \rrh{F}\rrh{Dp}\rrh{Fp} et on applique la règle pour la couche du bas comme expliqué en \ref{subsec:c1d}.
+
+
+Pour gagner du temps, lorsqu'on déplace une arrête sur la couche du bas, on va positioner l'arrête de manière à ce que sa face blanche soit vers le bas. C'est le cas pour l'exemple ci-dessus.
+
+Si l'arrête de positionnée comme dans le cube ci-dessous:
+
+\begin{center}
+	\RubikFaceUp%
+	{X}{X}{X}%
+	{X}{W}{X}%
+	{X}{X}{X}
+	\RubikFaceRight%
+	{X}{X}{X}%
+	{O}{R}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{X}{X}{X}%
+	{X}{G}{W}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	}
+\end{center}
+
+Alors on fait: \rrh{Rp}\rrh{Dp}\rrh{R}
+
+\subsection{L'arrête se trouve sur la couche du haut}
+
+Si l'arrête se trouve sur la couche du haut mais que ses couleurs sont inversés, comme dans l'exemple ci-dessous:
+
+\begin{center}
+	\RubikFaceUp%
+	{X}{X}{X}%
+	{X}{W}{X}%
+	{X}{O}{X}
+	\RubikFaceRight%
+	{X}{X}{X}%
+	{X}{G}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{X}{W}{X}%
+	{X}{O}{X}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	}
+\end{center}
+
+On peut faire pivoter l'arrête avec la séquence suivante: \rrh{F}\rrh{F}\rrh{D}\rrh{Sl}\rrh{Dp}\rrh{Slp}.
+
+Les deux premiers mouvements mettent l'arrête sur la dernière couche et la suite est la même séquence que dans la section \ref{subsec:c1d}.
+
+\begin{samepage}
+Si l'arrête est déjà bien orientée, mais qu'elle n'est pas au bon endroit, comme dans l'exemple ci-dessous:
+
+\begin{center}
+	\RubikFaceUp%
+	{X}{X}{X}%
+	{X}{W}{W}%
+	{X}{X}{X}
+	\RubikFaceRight%
+	{X}{O}{X}%
+	{X}{G}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{X}{X}{X}%
+	{X}{O}{X}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	}
+\end{center}
+\end{samepage}
+
+
+Si c'est la première arrête que vous mettez en place, vous pouvez simplement tourner la face du haut: \rrh{U}, mais si les autres arrêtes sont déjà en place, vous pouvez alors amener l'arrête sur la dernière couche: \rrh{Rp}\rrh{Rp}. L'arrête se trouve alors sur la dernière couche et on applique la méthode expliqué en \ref{subsec:c1d}.
+
+Si l'arrête se trouve sur la dernière couche et qu'elle n'est ni bien orientée, ni bien positionnée:
+
+\begin{center}
+	\RubikFaceUp%
+	{X}{X}{X}%
+	{X}{W}{O}%
+	{X}{X}{X}
+	\RubikFaceRight%
+	{X}{W}{X}%
+	{X}{G}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{X}{X}{X}%
+	{X}{O}{X}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	}
+\end{center}
+
+Vous pouvez l'ammener sur la couche du bas: \rrh{Rp}\rrh{Rp}\rrh{Dp}\rrh{R}\rrh{R} et ensuite appliquer la méthode expliqué en \ref{subsec:c1d}.
+
+Notez que dans l'exemple ci dessus, vous pouvez mettre l'arrête en place en continuant avec la simple séquence suivante: \rrh{Rp}\rrh{Fp}
+
+\section{Les coins de la première couche}
+
+Pour terminer la première couche, il ne nous reste plus qu'à mettre les coins en place.
+
+\subsection{Le coin à déplacer se trouve sur la couche du bas}
+\label{subsec:c1cd}
+
+Si le coin se trouve sur la dernière couche, il y a trois cas possibles.
+Le premier cas est celui où le coin est placé avec la côté blanc vers
+la face et il doit monter en diagonale: 
+
+\begin{center}  	
+	\RubikFaceRight%
+	{X}{G}{X}%
+	{X}{G}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{X}{O}{X}%
+	{X}{O}{X}%
+	{W}{X}{X}
+	\RubikFaceDown%
+	{G}{X}{X}%
+	{X}{Y}{X}%
+	{X}{X}{X}
+	
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRD
+		\tikzset{>=latex}
+		\draw[thick,->] (0.5,0.5) -- (2.5,2.5);
+	}
+\end{center} 
+
+On résout ce cas avec la séquence suivante:
+\rrh{D}\rrh{D}\rrh{F}\rrh{Dp}\rrh{Fp}
+
+Le deuxième cas est celui où le coin est placé avec la côté blanc vers
+la face et il doit monter en verticale: 
+
+\begin{center}
+	\RubikFaceRight%
+	{X}{G}{X}%
+	{X}{G}{X}%
+	{G}{X}{X}
+	\RubikFaceFront%
+	{X}{O}{X}%
+	{X}{O}{X}%
+	{X}{X}{W}
+	\RubikFaceDown%
+	{X}{X}{O}%
+	{X}{Y}{X}%
+	{X}{X}{X}
+	
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRD
+		\tikzset{>=latex}
+		\draw[thick,->] (2.5,0.5) -- (2.5,2.5);
+	}
+\end{center} 
+
+On résout ce cas avec la séquence suivante:
+\rrh{Dp}\rrh{Rp}\rrh{D}\rrh{R}
+
+
+Le troisième cas est celui où le coin est placé avec la côté blanc vers
+le bas. On commence par placer le coin à la verticale de la position
+vers laquelle on souhaite l'amener:
+
+\begin{center}
+	\RubikFaceRight%
+	{X}{G}{X}%
+	{X}{G}{X}%
+	{O}{X}{X}
+	\RubikFaceFront%
+	{X}{O}{X}%
+	{X}{O}{X}%
+	{X}{X}{G}
+	\RubikFaceDown%
+	{X}{X}{W}%
+	{X}{Y}{X}%
+	{X}{X}{X}
+	
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRD
+		\tikzset{>=latex}
+		\draw[thick,<->] (2.5,0.5) -- (2.5,2.5);
+	}
+\end{center} 
+
+La séquence suivante permet de faire pivoter le coin et le mettre en bas à gauche: \rrh{Rp}\rrh{D}\rrh{D}\rrh{R}
+
+\begin{samepage}
+Le résultat sera:
+
+\begin{center}
+	\RubikFaceRight%
+	{X}{G}{X}%
+	{X}{G}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{X}{O}{X}%
+	{X}{O}{X}%
+	{W}{X}{X}
+	\RubikFaceDown%
+	{G}{X}{X}%
+	{X}{Y}{X}%
+	{X}{X}{X}
+	
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRD
+	}
+\end{center} 
+\end{samepage}
+	
+Ce qui correspond à un cas connu et nous savons alors comment le faire
+venir à sa position finale.
+
+\subsection{Le coin à déplacer se trouve sur la face du haut}
+
+Les coins peuvent déjà se trouver soit sur la couche du haut, mais leur
+position n'est peut-être pas la bonne.
+
+Pour déplacer un coin, nous devons commencer par l'amener sur la couche du bas. Prenons l'exemple du cube ci-dessous:
+
+\begin{center}
+	\RubikFaceUp%
+	{X}{W}{X}%
+	{W}{W}{W}%
+	{X}{W}{G}
+	\RubikFaceRight%
+	{O}{R}{X}%
+	{X}{R}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{X}{G}{W}%
+	{X}{G}{X}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	}
+\end{center}
+
+Nous avons 4 possibilités pour faire descendre ce coin sur la dernière couche:
+
+\begin{itemize}
+	\item \rrh{F}\rrh{D}\rrh{Fp}
+	\item \rrh{F}\rrh{Dp}\rrh{Fp}
+	\item \rrh{Rp}\rrh{D}\rrh{R}
+	\item \rrh{Rp}\rrh{Dp}\rrh{R}		
+\end{itemize}
+
+Comme nous avons vu en \ref{subsec:c1cd}, c'est plus rapide si la face blanche du coin \textbf{n'est pas} dirigée vers le bas.
+
+\begin{samepage}
+Dans le cas ci-dessus, nous choisirons plutôt les variantes 1 et 3 qui se terminent avec les cubes suivants:
+
+\begin{center}
+	
+	\RubikFaceRight%
+	{X}{R}{X}%
+	{X}{R}{X}%
+	{X}{X}{W}
+	\RubikFaceFront%
+	{X}{G}{X}%
+	{X}{G}{X}%
+	{X}{X}{X}
+	\RubikFaceDown%
+	{X}{X}{X}%
+	{X}{Y}{X}%
+	{X}{X}{O}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRD
+	}%
+	\hspace*{1cm} 	
+	\RubikFaceRight%
+	{X}{R}{X}%
+	{X}{R}{X}%
+	{G}{X}{X}
+	\RubikFaceFront%
+	{X}{G}{X}%
+	{X}{G}{X}%
+	{X}{X}{W}
+	\RubikFaceDown%
+	{X}{X}{O}%
+	{X}{Y}{X}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRD
+	}
+\end{center} 
+\end{samepage}
+	
+On pourrait bien aussi avoir le cas où le coin est bien placé mais mal orienté:
+
+\begin{center}
+	\RubikFaceUp%
+	{X}{W}{X}%
+	{W}{W}{W}%
+	{X}{W}{O}
+	\RubikFaceRight%
+	{W}{G}{X}%
+	{X}{G}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{X}{O}{G}%
+	{X}{O}{X}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	}
+\end{center}
+
+Dans ce cas également nous l'amènerons sur la couche du bas, par exemple avec \rrh{Rp}\rrh{Dp}\rrh{R}.
+ 
+Ce qui donne:
+ 
+\begin{center}
+    \RubikFaceRight%
+ 	{X}{G}{X}%
+ 	{X}{G}{X}%
+ 	{X}{X}{X}
+ 	\RubikFaceFront%
+ 	{X}{O}{X}%
+ 	{X}{O}{X}%
+ 	{W}{X}{X}
+ 	\RubikFaceDown%
+ 	{G}{X}{X}%
+ 	{X}{Y}{X}%
+ 	{X}{X}{X}
+ 	\ShowCube{2cm}{0.5}{%
+ 		\DrawRubikCubeRD
+ 	}
+\end{center} 
+
+
+Ce cas est connu est nous savons comment faire monter ce coin en diagonale.
+
+Voila, vous avez maintenant toues les informations pour résoudre la première
+couche du cube. Entraînez-vous plusieurs fois à faire cette couche.

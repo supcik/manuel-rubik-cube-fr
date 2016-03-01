@@ -1,0 +1,269 @@
+\chapter{Notation}
+La littérature sur le Rubik's cube utilise souvent une notation spécifique pour décrire les mouvements. La table de la page suivante décrit la notation la plus souvent utilisée.
+
+Les lettres correspondent à la description de la face (en anglais): \textbf{R}ight (droit), \textbf{L}eft (gauche), \textbf{U}p (dessus), \textbf{D}own (dessous), \textbf{F}ront (avant), \textbf{B}ack (arrière).
+Si la lettre est seule, il faut tourner dans le sens des aiguilles d'une montre.
+Si la lettre est suivie d'un prime (') alors il faut tourner dans le sens \textbf{contraire} des aiguilles d'une montre. Si la lettre est suivie du chiffre 2, il faut répéter deux fois le mouvement (ce qui revient à lui faire faire un demi-tour, et le sens de rotation est donc égal).
+
+Cette notation est également utilisée dans les concours pour indiquer comment \emph{mélanger} un cube\cite{scramble}. En partant du cube terminé, faites la séquence suivante:
+
+\textbf{L2 U' B2 U2 B' -- U B U' L' F' -- L2 B D R D2 -- B2 F2 R' U L2 -- F2 D2 R B F}
+
+Le résultat sera:
+
+\begin{center}
+	\RubikFaceRight%
+	{R}{R}{W}%
+	{G}{G}{R}%
+	{O}{R}{O}
+	\RubikFaceFront%
+	{O}{O}{G}%
+	{O}{O}{O}%
+	{B}{Y}{W}
+	\RubikFaceUp%
+	{G}{B}{B}%
+	{G}{W}{W}%
+	{B}{Y}{W}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	}
+\end{center} 
+
+\setlength{\tabcolsep}{8pt}
+\begin{center}
+\begin{tabular}{ccccc}
+{\Huge\textbf{R}} &
+\RubikFaceRight%
+{X}{X}{X}%
+{X}{X}{X}%
+{X}{X}{X}
+\RubikFaceFront%
+{X}{X}{B}%
+{X}{X}{B}%
+{X}{X}{B}
+\RubikFaceUp%
+{X}{X}{B}%
+{X}{X}{B}%
+{X}{X}{B}
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,->] (2.5,0.5) -- (2.5,3) -- (2.5+5/6,3+5/6);
+}
+& \hspace*{5mm} &
+{\Huge\textbf{R'}} &
+\RubikFaceRight%
+{X}{X}{X}%
+{X}{X}{X}%
+{X}{X}{X}
+\RubikFaceFront%
+{X}{X}{B}%
+{X}{X}{B}%
+{X}{X}{B}
+\RubikFaceUp%
+{X}{X}{B}%
+{X}{X}{B}%
+{X}{X}{B}
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,<-] (2.5,0.5) -- (2.5,3) -- (2.5+5/6,3+5/6);
+}
+\\
+\noalign{\medskip}
+{\Huge\textbf{L}} &
+
+\RubikFaceRight%
+{X}{X}{X}%
+{X}{X}{X}%
+{X}{X}{X}
+\RubikFaceFront%
+{B}{X}{X}%
+{B}{X}{X}%
+{B}{X}{X}
+\RubikFaceUp%
+{B}{X}{X}%
+{B}{X}{X}%
+{B}{X}{X}
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,<-] (0.5,0.5) -- (0.5,3) -- (0.5+5/6,3+5/6);
+}
+& \hspace*{5mm} &
+{\Huge\textbf{L'}} &
+\RubikFaceRight%
+{X}{X}{X}%
+{X}{X}{X}%
+{X}{X}{X}
+\RubikFaceFront%
+{B}{X}{X}%
+{B}{X}{X}%
+{B}{X}{X}
+\RubikFaceUp%
+{B}{X}{X}%
+{B}{X}{X}%
+{B}{X}{X}
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,->] (0.5,0.5) -- (0.5,3) -- (0.5+5/6,3+5/6);
+}
+\\
+\noalign{\medskip}
+{\Huge\textbf{U}} &
+\RubikFaceRight%
+{B}{B}{B}%
+{X}{X}{X}%
+{X}{X}{X}
+\RubikFaceFront%
+{B}{B}{B}%
+{X}{X}{X}%
+{X}{X}{X}
+\RubikFaceUp%
+{X}{X}{X}%
+{X}{X}{X}%
+{X}{X}{X}
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,<-] (0.5,2.5) -- (3,2.5) -- (3+5/6,2.5+5/6);
+}
+& \hspace*{5mm} &
+{\Huge\textbf{U'}} &
+\RubikFaceRight%
+{B}{B}{B}%
+{X}{X}{X}%
+{X}{X}{X}
+\RubikFaceFront%
+{B}{B}{B}%
+{X}{X}{X}%
+{X}{X}{X}
+\RubikFaceUp%
+{X}{X}{X}%
+{X}{X}{X}%
+{X}{X}{X}
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,->] (0.5,2.5) -- (3,2.5) -- (3+5/6,2.5+5/6);
+}
+\\
+\noalign{\medskip}
+{\Huge\textbf{D}} &
+\RubikFaceRight%
+{X}{X}{X}%
+{X}{X}{X}%
+{B}{B}{B}
+\RubikFaceFront%
+{X}{X}{X}%
+{X}{X}{X}%
+{B}{B}{B}
+\RubikFaceUp%
+{X}{X}{X}%
+{X}{X}{X}%
+{X}{X}{X}
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,->] (0.5,0.5) -- (3,0.5) -- (3+5/6,0.5+5/6);
+}
+& \hspace*{5mm} &
+{\Huge\textbf{D'}} &
+\RubikFaceRight%
+{X}{X}{X}%
+{X}{X}{X}%
+{B}{B}{B}
+\RubikFaceFront%
+{X}{X}{X}%
+{X}{X}{X}%
+{B}{B}{B}
+\RubikFaceUp%
+{X}{X}{X}%
+{X}{X}{X}%
+{X}{X}{X}
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,<-] (0.5,0.5) -- (3,0.5) -- (3+5/6,0.5+5/6);
+}
+\\
+\noalign{\medskip}
+{\Huge\textbf{F}} &
+\RubikFaceRight%
+{B}{X}{X}%
+{B}{X}{X}%
+{B}{X}{X}
+\RubikFaceFront%
+{X}{X}{X}%
+{X}{X}{X}%
+{X}{X}{X}
+\RubikFaceUp%
+{X}{X}{X}%
+{X}{X}{X}%
+{B}{B}{B}
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,->] (0.5+1/6,3+1/6) -- (3+1/6,3+1/6) -- (3+1/6,0.5+1/6);
+}
+& \hspace*{5mm} &
+{\Huge\textbf{F'}} &
+\RubikFaceRight%
+{B}{X}{X}%
+{B}{X}{X}%
+{B}{X}{X}
+\RubikFaceFront%
+{X}{X}{X}%
+{X}{X}{X}%
+{X}{X}{X}
+\RubikFaceUp%
+{X}{X}{X}%
+{X}{X}{X}%
+{B}{B}{B}
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,<-] (0.5+1/6,3+1/6) -- (3+1/6,3+1/6) -- (3+1/6,0.5+1/6);
+}
+\\
+\noalign{\medskip}
+{\Huge\textbf{B}} &
+\RubikFaceRight%
+{X}{X}{B}%
+{X}{X}{B}%
+{X}{X}{B}
+\RubikFaceFront%
+{X}{X}{X}%
+{X}{X}{X}%
+{X}{X}{X}
+\RubikFaceUp%
+{B}{B}{B}%
+{X}{X}{X}%
+{X}{X}{X}
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,<-] (0.5+5/6,3+5/6) -- (3.5+2/6,3+5/6) -- (3.5+2/6,1+1/6);
+}
+& \hspace*{5mm} &
+{\Huge\textbf{B'}} &
+\RubikFaceRight%
+{X}{X}{B}%
+{X}{X}{B}%
+{X}{X}{B}
+\RubikFaceFront%
+{X}{X}{X}%
+{X}{X}{X}%
+{X}{X}{X}
+\RubikFaceUp%
+{B}{B}{B}%
+{X}{X}{X}%
+{X}{X}{X}
+\ShowCube{2cm}{0.5}{%
+	\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[red, thick,->] (0.5+5/6,3+5/6) -- (3.5+2/6,3+5/6) -- (3.5+2/6,1+1/6);
+}
+\end{tabular}
+\end{center}
