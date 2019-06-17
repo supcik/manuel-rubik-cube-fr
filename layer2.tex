@@ -16,9 +16,39 @@
 	}
 	\par
 }
+\medskip
 
-L'histoire que nous utilisons pour mémoriser les mouvements est connue sous \og l'histoire du Belge\fg{}. Mais comme nous aimons bien les Belges et que nous ne voulons pas de problème avec eux, nous appellerons plutôt cette histoire \og l'histoire du distrait\fg{}.
+Contrairement à la première couche, il est beaucoup plus difficile d'imaginer les mouvements qui permettent de positionner les arêtes de la deuxième couche. Nous devons alors apprendre une série de mouvements par cœur. Ça semble difficile, mais nous allons raconter une histoire, en relation avec les mouvements du cube, qui nous permettra de mieux mémoriser les mouvements. Par la suite, avec un peu de pratique, vous ferez ces séries de mouvements de manière automatique et vous n'aurez probablement plus besoin de l'histoire.  
 
+L'histoire que nous utilisons pour mémoriser les mouvements est connue sous \og{}l'histoire du Belge\fg{}. Mais comme nous aimons bien les Belges et que nous ne voulons pas de problème avec eux, nous pouvons aussi dire que c'est \og{}l'histoire du distrait\fg{}.
+
+\section{L'arête de trouve sur la couche du bas}\label{subsec:c21}
+
+Si l'arête que nous souhaitons mettre en place se trouve sur la couche du bas, nous commençons par positionner cette arête en faisant correspondre la couleur de l'arête avec la couleur du centre. Nous avons alors 2 cas possibles. Le premier, c'est que l'arête doit \og{}monter\fg{} vers la \textbf{droite}:
+\smallskip
+
+\begin{center}
+	\RubikFaceDown%
+	{X}{G}{X}%
+	{X}{Y}{X}%
+	{X}{X}{X}
+	\RubikFaceRight%
+	{G}{G}{G}%
+	{X}{G}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{O}{O}{O}%
+	{X}{O}{X}%
+	{X}{O}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRD
+	\tikzset{>=latex}
+	\draw[thick,->] (1.5,0.5) -- (2.5,1.5);	
+	}
+\end{center}
+\smallskip
+
+Voici l'\og{}histoire\fg{} qui permet de résoudre ce cas:
 \begin{itemize}
 	\item Il doit aller à droite, mais il se trompe et part à gauche: \rrh{Dp}.
 	\item Ses amis viennent le chercher: \rrh{Rp}.
@@ -28,5 +58,111 @@ L'histoire que nous utilisons pour mémoriser les mouvements est connue sous \og
 	\item Il va tellement vite qu'il emporte la face avant: \rrh{F}.
 	\item Il remarque enfin son erreur et retourne sur ses pas: \rrh{Dp}.
 	\item La face avant peut se remettre en place: \rrh{Fp}.
-	
 \end{itemize}
+
+Vous pouvez aussi vous amuser à ajouter des détails à l'histoire ou même à vous inventer votre propre histoire si ça vous aide. 
+
+\newpage
+Le deuxième cas c'est que l'arête doit \og{}monter\fg{} vers la \textbf{gauche}:
+\smallskip
+
+\begin{center}
+	\RubikFaceDown%
+	{X}{B}{X}%
+	{X}{Y}{X}%
+	{X}{X}{X}
+	\RubikFaceLeft%
+	{B}{B}{B}%
+	{X}{B}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{O}{O}{O}%
+	{X}{O}{X}%
+	{X}{O}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeLD
+		\tikzset{>=latex}
+		\draw[thick,->] (1.5,0.5) -- (0.5,1.5);	
+	}
+\end{center}
+\smallskip
+
+L'histoire est la même, mais le sens est inversé:
+\begin{itemize}
+	\item Il doit aller à gauche, mais il se trompe et part à droite: \rrh{D}.
+	\item Ses amis viennent le chercher: \rrh{L}.
+	\item Il se dirige alors dans le bon sens: \rrh{Dp}.
+	\item Ses amis rentrent chez eux: \rrh{Lp}.
+	\item Emporté par son élan, il continue trop loin: \rrh{Dp}.
+	\item Il va tellement vite qu'il emporte la face avant: \rrh{Fp}.
+	\item Il remarque enfin son erreur et retourne sur ses pas: \rrh{D}.
+	\item La face avant peut se remettre en place: \rrh{F}.
+\end{itemize}
+
+\newpage
+\section{L'arête de trouve sur la couche du milieu}
+
+Si l'arête se trouve sur la couche du milieu, mais qu'elle n'est pas bien placée:
+\smallskip
+
+\begin{center}
+	
+	\RubikFaceUp%
+	{W}{W}{W}%
+	{W}{W}{W}%
+	{W}{W}{W}
+	\RubikFaceRight%
+	{G}{G}{G}%
+	{R}{G}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{O}{O}{O}%
+	{X}{O}{B}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	}%
+	\hspace*{5mm}ou\hspace*{3mm} 	
+	\RubikFaceUp%
+	{W}{W}{W}%
+	{W}{W}{W}%
+	{W}{W}{W}
+	\RubikFaceRight%
+	{G}{G}{G}%
+	{O}{G}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{O}{O}{O}%
+	{X}{O}{G}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	}
+\end{center}
+\smallskip
+
+Il suffit de remplacer cette arête par n'importe laquelle de la couche du bas à l'aide de la séquence ci-dessus. L'arête remplacée se retrouvera sur la couche du bas et vous pourrez faire comme expliqué en \ref{subsec:c21}.
+
+\smallskip
+\begin{center}	
+	\RubikFaceUp%
+	{W}{W}{W}%
+	{W}{W}{W}%
+	{W}{W}{W}
+	\RubikFaceRight%
+	{G}{G}{G}%
+	{X}{G}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{O}{O}{O}%
+	{X}{O}{X}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[thick,->] (1.5,0.5) -- (2.5,1.5);	
+	}
+\end{center}
+\smallskip
+
+C'est déjà tout pour la couche du milieu. Il vous suffit d'apprendre une histoire par cœur et de vous entraîner.

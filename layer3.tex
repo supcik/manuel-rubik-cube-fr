@@ -1,5 +1,6 @@
 \chapter{La dernière couche}
 
+
 {
 	\centering
 	\RubikFaceUpAll{W}
@@ -16,3 +17,239 @@
 	}
 	\par
 }
+
+Pour la dernière couche, nous retournons le cube. Si nous avons commencé avec la face blanche, ça veut dire que nous aurons la face jaune vers le haut. 
+
+\section{La Croix}
+
+Comme pour la première couche, nous commençons par réaliser une croix jaune.
+
+\subsection{Une ligne sur la face}
+
+\begin{samepage}
+S’il y a une ligne jaune sur le cube, placez la ligne horizontalement comme sur la figure ci-dessous:
+
+\begin{center}	
+	\RubikFaceUp%
+	{X}{X}{X}%
+	{Y}{Y}{Y}%
+	{X}{X}{X}
+	\RubikFaceRight%
+	{X}{X}{X}%
+	{X}{B}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{X}{X}{X}%
+	{X}{O}{X}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	}
+\end{center}
+\end{samepage}
+	
+Pour réaliser la croix à partir de cette position, faites la séquence de mouvements suivants:
+
+\rrh{F}\rrh{R}\rrh{U}\rrh{Rp}\rrh{Up}\rrh{Fp}
+
+Pour mémoriser cette suite de mouvements, vous pouvez inventer votre propre histoire. En voici une qui peut vous aider à trouver l'inspiration:
+
+\begin{itemize}
+	\item Il va dans le futur en fusée: \rrh{F}.
+	\item Les extra-terrestres montent le voir: \rrh{R}.
+	\item Il s'enfuit hors de la fusée: \rrh{U}.
+	\item Les extra-terrestres rentrent chez eux: \rrh{Rp}.
+	\item Il rentre dans la fusée: \rrh{Up}.
+	\item Il revient dans le présent: \rrh{Fp}.
+\end{itemize}
+
+\subsection{Un «L» sur la face}
+\begin{samepage}
+Si au lieu d'une ligne, vous avez un «L» inversé sur la face:
+
+\begin{center}	
+	\RubikFaceUp%
+	{X}{Y}{X}%
+	{Y}{Y}{X}%
+	{X}{X}{X}
+	\RubikFaceRight%
+	{X}{X}{X}%
+	{X}{B}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{X}{X}{X}%
+	{X}{O}{X}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	}
+\end{center}
+\end{samepage}
+	
+Vous pouvez obtenir une croix avec la séquence suivante:
+
+\rrh{F}\rrh{U}\rrh{R}\rrh{Up}\rrh{Rp}\rrh{Fp}
+
+Voici une histoire pour vous aider à mémoriser cette séquence.
+
+\begin{itemize}
+	\item Il va dans le futur: \rrh{F}.
+	\item Il ouvre une boîte: \rrh{U}.
+	\item Il en sort un billet: \rrh{R}.
+	\item Il referme la boîte: \rrh{Up}.
+	\item Il met le billet sans sa poche: \rrh{Rp}.
+	\item Il revient dans le présent: \rrh{Fp}.
+\end{itemize}
+
+Vous pouvez bien évidemment inventer votre propre histoire si vous voulez.
+
+\subsection{Autre configuration}
+
+Si vous n'avez ni ligne ni «L» inversé, vous pouvez faire l'une ou l'autre des méthodes ci-dessus pour obtenir une configuration connue.
+
+\section{Positionnement des arêtes}
+
+Après avoir fait la croix, il est très probable que les arêtes ne soient pas bien positionnées. La séquence que nous allons voir permet de faire \textit{tourner} les trois arêtes comme dans la figure ci-dessous. Observez bien votre cube, positionnez la dernière couche pour faire correspondre l'arête avec le centre devant vous:
+
+\begin{center}	
+	\RubikFaceUp%
+	{X}{Y}{X}%
+	{Y}{Y}{Y}%
+	{X}{Y}{X}
+	\RubikFaceRight%
+	{X}{G}{X}%
+	{X}{B}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{X}{O}{X}%
+	{X}{O}{X}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	}
+\end{center}
+
+Regardez si la rotation des arêtes comme montrée sur la figure suivante permet de bien positionner les arêtes. 
+ 
+
+\begin{center}	
+\ShowCube{2.1cm}{0.7}{%
+	\DrawRubikLayerFace
+	{X}{Y}{X}
+	{Y}{Y}{Y}
+	{X}{Y}{X}
+	\tikzset{>=latex}
+	\draw[thick,->] (2.5,1.5) -- (0.5,1.5);	
+	\draw[thick,->] (0.5,1.5) -- (1.5,2.5);	
+	\draw[thick,->] (1.5,2.5) -- (2.5,1.5);	
+}
+\end{center}
+
+Si la couleur que vous avez choisie ne «fonctionne» pas, essayez avec une autre couleur. Si aucune couleur ne fonctionne, choisissez une couleur au hasard.
+
+Pour faire tourner les arêtes comme indiqué sur la figure ci-dessus, nous utilisons \textbf{l'histoire de la chaise}:
+
+\begin{itemize}
+	\item Il se lève: \rrh{R}.
+	\item Il part très très loin: \rrh{U}\rrh{U}.
+	\item Sa chaise tombe: \rrh{Rp}.
+	\item Il revient sur ses pas: \rrh{Up}.
+	\item Il relève sa chaise: \rrh{R}.
+	\item Il revient encore un peu plus sur ses pas: \rrh{Up}.	
+	\item Il s'assied: \rrh{Rp}.
+\end{itemize}
+
+\section{Positionnement des sommets}
+
+Une fois la croix terminée, nous allons positionner les 4 derniers sommets. Le but pour l'instant est les sommets soient au bon endroit, sans s'inquiéter de leurs orientations. Dans la figure ci-dessous, le sommet jaune-orange-bleu est bien placé.
+
+\begin{center}	
+	\RubikFaceUp%
+	{X}{Y}{X}%
+	{Y}{Y}{Y}%
+	{X}{Y}{B}
+	\RubikFaceRight%
+	{O}{B}{X}%
+	{X}{B}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{X}{O}{Y}%
+	{X}{O}{X}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	}
+\end{center}
+
+Cherchez un sommet qui est déjà bien placé et mettez-le en haut à droite comme sur la figure ci-dessous. Nous faisons tourner les trois autres sommets avec l'histoire \textbf{des amis}:
+
+\begin{itemize}
+	\item Ses amis de gauche montent le voir: \rrh{Lp}.
+	\item Il va les saluer:  \rrh{U}.
+	\item Ses amis de droite montent le voir: \rrh{R}.
+	\item Il va les saluer: \rrh{Up}.
+	\item Ses amis de gauche se sentent seuls et descendent chez eux: \rrh{L}.
+	\item Il va leur dire au revoir: \rrh{U}.
+	\item Ses amis de droite se sentent seuls et descendent chez eux: \rrh{Rp}.
+	\item Il va leur dire au revoir: \rrh{Up}.
+\end{itemize}
+
+Répétez cette séquence jusqu'à ce que les sommets soient tous bien placés.
+
+\section{Orientation des sommets}
+
+Pour terminer le cube, nous devons encore orienter les sommets. Avec la dernière séquence, nous pouvons faire pivoter les sommets comme indiqué sur la figure ci-dessous:
+
+\begin{center}	
+	\RubikFaceUp%
+	{X}{Y}{B}%
+	{Y}{Y}{Y}%
+	{X}{Y}{B}
+	\RubikFaceRight%
+	{Y}{B}{Y}%
+	{X}{B}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{X}{O}{O}%
+	{X}{O}{X}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	\tikzset{>=latex}
+	\draw[->] (3 + 1/6,2.5+0/6) -- (3 + 1/6,2.5+3/6);
+	\draw[white,->] (3 + 0/6,2.5+4/6) -- (2.5 + 0/6,2.5+4/6);
+	
+	\draw[->] (3.5 + 2/6,3.0+1/6) -- (3.5 + 2/6,3.0+4/6);
+	\draw[white,->] (3.5 + 1/6,3.0+5/6) -- (3.0 + 1/6,3.0+5/6);	
+}
+\end{center}
+
+La séquence semble compliquée, mais c'est deux fois l'histoire de la chaise. Une première fois à droite:
+
+\rrh{R}\rrh{U}\rrh{U}\rrh{Rp}\rrh{Up}\rrh{R}\rrh{Up}\rrh{Rp}
+
+\begin{itemize}
+	\item Il se lève: \rrh{R}.
+	\item Il part très très loin: \rrh{U}\rrh{U}.
+	\item Sa chaise tombe: \rrh{Rp}.
+	\item Il revient sur ses pas: \rrh{Up}.
+	\item Il relève sa chaise: \rrh{R}.
+	\item Il revient encore un peu plus sur ses pas: \rrh{Up}.	
+	\item Il s'assied: \rrh{Rp}.
+\end{itemize}
+
+Et une deuxième fois à gauche:
+
+\rrh{Lp}\rrh{Up}\rrh{Up}\rrh{L}\rrh{U}\rrh{Lp}\rrh{U}\rrh{L}
+
+\begin{itemize}
+	\item Il se lève: \rrh{Lp}.
+	\item Il part très très loin: \rrh{Up}\rrh{Up}.
+	\item Sa chaise tombe: \rrh{L}.
+	\item Il revient sur ses pas: \rrh{U}.
+	\item Il relève sa chaise: \rrh{Lp}.
+	\item Il revient encore un peu plus sur ses pas: \rrh{U}.	
+	\item Il s'assied: \rrh{L}.
+\end{itemize}
+
+Répétez cette séquence tant que le cube n'est pas terminé.

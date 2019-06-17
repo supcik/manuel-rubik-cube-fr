@@ -24,16 +24,16 @@ Le cube se compose de 6 \textbf{centres} qui sont toujours placés de la même m
 	}
 \end{center}
 
-Les centres sont identifiés par une \textbf{pastille}\footnote{La plupart des cubes du commerce ont des auto-collants pour identifier les couleurs.} de couleur. Les
+Les centres sont identifiés par une \textbf{pastille}\footnote{La plupart des cubes du commerce ont des auto-collants pour identifier les couleurs.} Les
 couleurs du cube original sont blanc, rouge, bleu, orange, vert et jaune.
-Si votre cube à d'autres couleurs ce n'est pas grave, la méthode reste la
+Si votre cube a d'autres couleurs, ce n'est pas grave, la méthode reste la
 même.
 
 Les centres restent toujours à la même place; vous pouvez faire tous les mouvements que vous voulez, vous ne changerez jamais la position des centres.
 
-\section{Les arrêtes}
+\section{Les arêtes}
 \begin{samepage}
-Le cube se compose également de 12 \textbf{arrêtes}:
+Le cube se compose également de 12 \textbf{arêtes}:
 
 \begin{center}
 	\RubikFaceUp%
@@ -54,11 +54,11 @@ Le cube se compose également de 12 \textbf{arrêtes}:
 \end{center}
 \end{samepage}
 
-Les arrêtes sont les pièces placées entre les centres et elles ont toutes 2 pastilles de couleur. La deuxième couche du cube n'est composé que de quatre  centres et  quatre arrêtes.
+Les arêtes sont les pièces placées entre les centres et elles ont toutes 2 pastilles de couleur différentes.
 
-\section{Les coins}
+\section{Les sommets}
 
-Pour terminer le cube a 8 \textbf{coins}:
+Pour terminer le cube a 8 \textbf{sommets}:
 
 \begin{center}
 	\RubikFaceUp%
@@ -78,6 +78,119 @@ Pour terminer le cube a 8 \textbf{coins}:
 	}
 \end{center}
 
-Chaque coin a 3 pastilles de couleur.
+Chaque sommet a 3 pastilles de couleur différentes.
 
-Il reste encore une pièce que nous ne voyons pas et qui est au milieu du cube. Si on additionne tous les types de pièces, on a $6 + 12 + 8 + 1 = 27$, ce qui correspond bien à ce que nous attendions avec un cube de $3 \times 3 \times 3$\footnote{$3 \cdot 3 \cdot 3 = 3^3 = 27$}.
+Il reste encore une pièce que nous ne voyons pas et qui est au milieu du cube. Si on additionne tous les types de pièces, on a $6 + 12 + 8 + 1 = 27$, ce qui correspond bien à ce que nous attendions avec un cube de $3 \times 3 \times 3$.
+
+\section{Les couches}
+\begin{samepage}
+Une \textbf{couche} peut être comparée à un «étage» du cube. Le Rubik's cube est composé de trois couches:
+
+\begin{center}
+	\RubikFaceUp%
+	{W}{W}{W}%
+	{W}{W}{W}%
+	{W}{W}{W}
+	\RubikFaceRight%
+	{G}{G}{G}%
+	{X}{X}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{O}{O}{O}%
+	{X}{X}{X}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+		\node[anchor=center] at(1.5,2.5) {1};
+	}
+	\hspace*{5mm}
+	\RubikFaceUp%
+	{X}{X}{X}%
+	{X}{X}{X}%
+	{X}{X}{X}
+	\RubikFaceRight%
+	{X}{X}{X}%
+	{G}{G}{G}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{X}{X}{X}%
+	{O}{O}{O}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+		\node[anchor=center] at(1.5,1.5) {2};
+	}
+	\hspace*{5mm}
+	\RubikFaceUp%
+	{X}{X}{X}%
+	{X}{X}{X}%
+	{X}{X}{X}
+	\RubikFaceRight%
+	{X}{X}{X}%
+	{X}{X}{X}%
+	{G}{G}{G}
+	\RubikFaceFront%
+	{X}{X}{X}%
+	{X}{X}{X}%
+	{O}{O}{O}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+		\node[anchor=center] at(1.5,0.5) {3};
+	}
+\end{center}
+\end{samepage}
+	
+Avec la méthode proposée dans ce livre, vous commencerez par faire la première couche (parfois aussi appelée couche du haut), puis vous passerez à la deuxième couche (ou couche du milieu) et vous terminerez avec la troisième couche (ou couche du bas).
+
+\section{Les faces}
+
+\begin{center}
+	\RubikFaceUp%
+	{W}{W}{W}%
+	{W}{W}{W}%
+	{W}{W}{W}
+	\RubikFaceRight%
+	{X}{X}{X}%
+	{X}{X}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{X}{X}{X}%
+	{X}{X}{X}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	}
+	\hspace*{5mm}
+	\RubikFaceUp%
+	{X}{X}{X}%
+	{X}{X}{X}%
+	{X}{X}{X}
+	\RubikFaceRight%
+	{G}{G}{G}%
+	{G}{G}{G}%
+	{G}{G}{G}
+	\RubikFaceFront%
+	{X}{X}{X}%
+	{X}{X}{X}%
+	{X}{X}{X}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	}
+	\hspace*{5mm}
+	\RubikFaceUp%
+	{X}{X}{X}%
+	{X}{X}{X}%
+	{X}{X}{X}
+	\RubikFaceRight%
+	{X}{X}{X}%
+	{X}{X}{X}%
+	{X}{X}{X}
+	\RubikFaceFront%
+	{O}{O}{O}%
+	{O}{O}{O}%
+	{O}{O}{O}
+	\ShowCube{2cm}{0.5}{%
+		\DrawRubikCubeRU
+	}
+\end{center}
+
