@@ -2,52 +2,51 @@
 \usepackage{geometry}
 \usepackage{fontspec}                           
 \usepackage{graphicx}
+\usepackage{tcolorbox}
 \usepackage[french]{babel}
 \usepackage{tikz}
 \usepackage{rubikcube,rubikrotation}
 \usepackage{parskip}
 \usepackage{enumitem}
+\usepackage{pdfpages}
 \usepackage{url}
+\usepackage[nochapter]{vhistory}
 
 
 \usetikzlibrary{arrows}
 \setlist[itemize,1]{label={\fontfamily{cmr}\fontencoding{T1}\selectfont\textbullet}}
 
 \setmainfont{Alegreya Sans}
-\setkomafont{disposition}{\normalfont}
+
+\newfontfamily\barlow{Barlow Semi Condensed}
+\setkomafont{disposition}{\barlow}
 
 \begin{document}
 \frontmatter
 \thispagestyle{empty}
+
 \begin{titlepage}
-\begin{center}
-% \includegraphics[width=8cm]{bluemagic_logo.pdf}
-% \vspace*{8mm}
-
-\rule{\textwidth}{1pt}
-{\fontspec{Roboto}\Huge\textbf{Apprenez à résoudre\\
-\medskip
-le Rubik's Cube}}
-\bigskip
-
-{\LARGE\textit{La méthode \og couche par couche\fg}}
-\rule{\textwidth}{1pt}
-\vspace*{10mm}
-
-{\Large Jacques Supcik}
-\vspace*{10mm}
-
-\enlargethispage{15mm}
-{\Large Juin 2019}
-\vfill
-
-{\large\textit{\textcolor[gray]{0.1}{version 0.3.3}}}
-
-\end{center}
+\includepdf{title}
 \end{titlepage}
 
 \thispagestyle{empty}
-\par\vspace*{\fill}
+\null
+\vfill
+
+Le code source de ce document est disponible sur github à l'adresse\\
+\url{https://github.com/supcik/manuel-rubik-cube-fr}.
+\par\vspace*{8mm}
+
+\begin{minipage}[c]{\textwidth}
+\begin{versionhistory}
+	\vhEntry{1.0.2}{20.06.2019}{JS}{Nouvelle page de titre}
+	\vhEntry{1.0.1}{17.06.2019}{JS}{Corrections}
+	\vhEntry{0.0.0}{20.02.2016}{JS}{Premier draft}
+\end{versionhistory}
+\end{minipage}
+\par\vspace*{10mm}
+
+
 \includegraphics[width=30mm]{by.pdf}
 
 Copyright \textcopyright{} 2019 Jacques Supcik
@@ -92,4 +91,10 @@ Pour obtenir une copie de la licence, visitez:\\
 	
 \end{thebibliography}
 
+\chapter{Crédits}
+
+Image de couverture : \url{https://commons.wikimedia.org/wiki/File:Rubik%27s_cube_v3.svg}
+
+Les images du cube et les illustrations des mouvements dans le texte sont faites à l'aide
+de la bibliothèque « Rubik » de RWD Nick­alls et A Sy­ropou­los : \url{https://ctan.org/tex-archive/macros/latex/contrib/rubik}
 \end{document}
