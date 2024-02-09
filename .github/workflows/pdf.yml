@@ -1,4 +1,4 @@
-name: "Build PDF"
+name: 'Build PDF'
 
 on:
   workflow_dispatch:
@@ -9,15 +9,15 @@ on:
 
 jobs:
   build:
-    runs-on: "ubuntu-latest"
+    runs-on: 'ubuntu-latest'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: "make pdf"
+      - name: 'make pdf'
         uses: xu-cheng/latex-action@v3
         with:
           root_file: |
-          rubikscube.tex
+            rubikscube.tex
       - name: Archive PDF
         uses: actions/upload-artifact@v4
         with:
