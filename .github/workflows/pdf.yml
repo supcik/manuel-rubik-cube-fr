@@ -24,3 +24,5 @@ jobs:
           name: manuel-rubikscube-fr
           path: |
             rubikscube.pdf
+          extra_fonts: |
+            ./fonts/*.ttf
