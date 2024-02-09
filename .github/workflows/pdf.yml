@@ -16,13 +16,10 @@ jobs:
       - name: 'make pdf'
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: |
-            rubikscube.tex
+          root_file: rubikscube.tex
+          extra_fonts: ./fonts/*.ttf
       - name: Archive PDF
         uses: actions/upload-artifact@v4
         with:
           name: manuel-rubikscube-fr
-          path: |
-            rubikscube.pdf
-          extra_fonts: |
-            ./fonts/*.ttf
+          path: rubikscube.pdf
