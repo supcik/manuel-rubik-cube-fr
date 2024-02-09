@@ -1,0 +1,26 @@
+name: "Build PDF"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: "make pdf"
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: |
+          rubikscube.tex
+      - name: Archive PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: manuel-rubikscube-fr
+          path: |
+            rubikscube.pdf
